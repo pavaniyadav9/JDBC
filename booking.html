@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Book Hall</title>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<div class="container"><h1>Book a Hall</h1>
+<form method="post" action="book">
+<label>User ID</label><input name="userId" type="number" required>
+<label>Hall ID</label><input id="hallId" name="hallId" type="number" required>
+<label>Booking Date</label><input name="bookingDate" type="date" required>
+<button class="btn" type="submit">Confirm Booking</button>
+</form></div>
+<script>
+const id=new URLSearchParams(location.search).get('hallId');
+if(id) document.getElementById('hallId').value=id;
+</script>
+</body></html>
